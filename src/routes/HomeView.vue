@@ -33,10 +33,10 @@ Copyright (c) 2023. Kibble Game Studios Inc. All Rights Reserved.
         <div class="flexitem dialog">
             <form class="sample-form">
                 <label for="s1">Sample field:
-                    <input name="s1" v-model="formData.sampleOne">
+                    <input class="input" name="s1" v-model="formData.sampleOne">
                 </label><br/>
                 <label for="s2">Number field:
-                    <input name="s2" v-model="formData.sampleTwo">
+                    <input class="input" name="s2" v-model="formData.sampleTwo">
                 </label><br/>
                 <button value="Submit" class="">Submit</button>
             </form>
@@ -48,20 +48,18 @@ Copyright (c) 2023. Kibble Game Studios Inc. All Rights Reserved.
     /* Local styles for this template */
     .home {
         margin:2vw;
-        border: 1px solid black;
-        background-color: lightgray;
-        color: black;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 1, 58);
         height: 78vh;
         width: 80vw;
+        padding: 50px;
     }
 
     .sample-form {
-        border: 2px solid #333;
+        border: 1px solid rgb(0, 1, 49);
         margin: 1em;
         padding: 2em;
     }
-
-    label { text-shadow: #333 1px 1px; }
 
     select, input, button {
         font-size: 1.2em;
@@ -74,6 +72,13 @@ Copyright (c) 2023. Kibble Game Studios Inc. All Rights Reserved.
         padding: .5em;
         margin: .25em;
         padding-bottom: 1.5em;
+        background-color: rgb(3, 3, 29);
+        font-size: 1em;
+        color: white;
+    }
+
+    .input{
+        border: 1px solid rgb(54, 54, 54);
     }
 </style>
 

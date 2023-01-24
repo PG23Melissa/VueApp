@@ -11,7 +11,7 @@ import VFSNavbar from '@/components/Navbar.vue'
 <template>
 
     <header class="wrapper container columns">
-        <VFSHeader title="A sample app" />
+        <VFSHeader title="A sample app" subtitle="JJJJ" ></VFSHeader>
         <VFSNavbar />
     </header>
     <main>
@@ -22,7 +22,11 @@ import VFSNavbar from '@/components/Navbar.vue'
 <style>
 
     header {
-        background: #D10034;
+        /* background: #D10034; */
+        background-image: url("assets/triangle-bk.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;

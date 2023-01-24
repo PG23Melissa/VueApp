@@ -13,7 +13,7 @@ export const useInfoStore = defineStore('info', {
     }),
 
     getters: {
-        name: state => { return "VFS PG Vue 3.x Template" },
+        name: state => { return "VFS Vue Project" },
         version: state => {
 
             const month = state.today.getUTCMonth() + 1;  // Jan = 0

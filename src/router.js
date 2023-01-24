@@ -1,6 +1,7 @@
 /*
 VUE App's MAIN Component.
 Copyright (c) 2018. Scott Henshaw, Kibble Online Inc. All Rights Reserved.
+CopyRight (c) 2023. Melissa Osorio. All Rights Reserved.
 */
 'use strict';
 
@@ -23,6 +24,11 @@ const router = createRouter({
             path:"/info",
             name:"Info",
             component: () => import('@/routes/Vue3InfoView.vue')
+        },
+        {
+            path:"/charts",
+            name:"Charts",
+            component: () => import('@/routes/ChartsView.vue')
         }
     ]
 });

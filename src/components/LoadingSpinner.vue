@@ -21,6 +21,7 @@ class SpinnerController extends Controller {
     constructor( name, subComponentList = []) {
         super( name, subComponentList );
         this.vm = {
+            
         }
     }
 }
