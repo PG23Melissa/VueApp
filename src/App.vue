@@ -2,35 +2,61 @@
 
 import { RouterLink, RouterView } from 'vue-router'
 
-import VFSHeader from '@/components/Header.vue'
-import VFSNavbar from '@/components/Navbar.vue'
+import RollerHeader from '@/components/Header.vue'
+import RollerNavbar from '@/components/Navbar.vue'
+import VFSTunablePanel from '@/components/TunablePanel.vue'
 
 // todo import appInfoStore
+
+import Controller from '@/plugins/controller'
+
+    class AppController extends Controller {
+
+        constructor( name, subComponentList = []) {
+            super( name, subComponentList )
+            this.vm = {}
+            this.props = {}
+            this.emits = []
+            //this.injectGetters([/* List of names in array */]);
+            //this.injectActions(['actionMethod','anotherAction'])
+        }
+    }
+
+    const app = new AppController('VFSApp', {
+        RollerHeader,
+        RollerNavbar,
+        VFSTunablePanel
+    });
 
 </script>
 <template>
 
     <header class="wrapper container columns">
-        <VFSHeader title="A sample app" subtitle="JJJJ" ></VFSHeader>
-        <VFSNavbar />
+        <RollerHeader title="VueApp" subtitle="V2.1">
+            <!--replacing the slot component-->
+            <!--<img alt="RollerCrasher Image" class="logo" src="@/assets/Images/RCcharacter.png" width="130" height="110" @click="$router.push('/')"/>-->
+        </RollerHeader>
+        <RollerNavbar />
     </header>
     <main>
         <RouterView />
+        <aside class="small-item">
+            <VFSTunablePanel title="Game Variables" />
+        </aside>
     </main>
+
+    <footer>
+        Copyright 2023 Melissa Osorio
+    </footer>
 
 </template>
 <style>
 
     header {
-        /* background: #D10034; */
-        background-image: url("assets/triangle-bk.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        background: #fdfafa;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        box-shadow: 0 4px 5px -5px #222;
         width: 100vw;
     }
 
